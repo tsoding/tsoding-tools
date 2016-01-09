@@ -3,7 +3,7 @@ YOUTUBE_PROFILES=profiles/Beatwave-Profile-Youtube.md profiles/Morganey-Profile-
 
 all: Makefile $(GENERAL_PROFILES) $(YOUTUBE_PROFILES)
 
-profiles/%-Profile.md: %.profile Profile-Template.md Expand-Template.sh
+profiles/%-Profile.md: %.param Profile-Template.md Expand-Template.sh
 	./Expand-Template.sh $< ./Profile-Template.md > $@
 
 profiles/%-Profile-Youtube.md: profiles/%-Profile.md
