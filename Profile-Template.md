@@ -1,6 +1,6 @@
 ${PROJECT_DESCRIPTION}
 
-- [GitHub](${PROJECT_GITHUB_URL})
+- [GitHub Repo](${PROJECT_GITHUB_URL})
 - [Trello](https://trello.com/b/8mA1y1bP/morning-tsoding)
 - [Twitch](http://www.twitch.tv/tsoding)
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg/live)
