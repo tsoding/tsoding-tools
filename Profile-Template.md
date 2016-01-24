@@ -1,3 +1,5 @@
+Title: ${PROJECT_TITLE} — Morning Tsoding
+
 ${PROJECT_DESCRIPTION}
 
 - [GitHub Repo](${PROJECT_GITHUB_URL})
