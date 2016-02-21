@@ -8,6 +8,6 @@ ${PROJECT_DESCRIPTION}
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg/live)
 - [LCTV](https://www.livecoding.tv/rexim/)
 
-Stream days are the ones on S and T: Tuesday, Thursday, Saturday and Sunday. The time is usually 10.00 NOVT
+Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 
 Join our Russian Programming Community called TsodingTeam (it's actually CodingTeam, but we like to pronounce it like TsodingTeam :P): xmpp:codingteam@conference.jabber.ru
