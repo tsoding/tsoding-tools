@@ -1,12 +1,11 @@
-Title: ${PROJECT_TITLE} — Morning Tsoding
-
 ${PROJECT_DESCRIPTION}
 
 - [GitHub Repo](${PROJECT_GITHUB_URL})
-- [Trello](https://trello.com/b/8mA1y1bP/morning-tsoding)
+- [Twitter](https://twitter.com/tsoding)
 - [Twitch](http://www.twitch.tv/tsoding)
-- [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg/live)
+- [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
 - [LCTV](https://www.livecoding.tv/rexim/)
+- [Trello](https://trello.com/b/8mA1y1bP/morning-tsoding)
 
 Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 
