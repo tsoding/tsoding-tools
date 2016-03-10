@@ -1,3 +1,2 @@
-PROJECT_TITLE="Hacking Emacs and Brains"
 PROJECT_DESCRIPTION="Developing a brainfuck compiler to Emacs Lisp"
 PROJECT_GITHUB_URL="https://github.com/rexim/ebf"
