@@ -1,6 +1,10 @@
 ${PROJECT_DESCRIPTION}
-
-- [GitHub Repo](${PROJECT_GITHUB_URL})
+$(if [ ! -z "${PROJECT_GITHUB_URL}" ]; then
+    echo ""
+    echo "- [GitHub Repo](${PROJECT_GITHUB_URL})";
+else
+    echo " ";
+fi)
 - [Twitter](https://twitter.com/tsoding)
 - [Twitch](http://www.twitch.tv/tsoding)
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
