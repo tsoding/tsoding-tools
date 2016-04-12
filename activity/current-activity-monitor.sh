@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 INPROGRESS_CARDS_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
 
