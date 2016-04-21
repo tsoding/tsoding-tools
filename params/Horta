@@ -1,2 +1,2 @@
-PROJECT_DESCRIPTION="Developing an XMPP bot in Scala"
-PROJECT_GITHUB_URL="https://github.com/codingteam/horta-hell"
+define(PROJECT_DESCRIPTION, `Developing an XMPP bot in Scala')
+define(PROJECT_GITHUB_URL, `https://github.com/codingteam/horta-hell')

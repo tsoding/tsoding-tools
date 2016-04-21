@@ -1,2 +1,2 @@
-PROJECT_DESCRIPTION="Working on whatever"
-PROJECT_GITHUB_URL="https://github.com/rexim"
+define(PROJECT_DESCRIPTION, `Working on whatever')
+define(PROJECT_GITHUB_URL, `https://github.com/tsoding')

@@ -1,10 +1,7 @@
-${PROJECT_DESCRIPTION}
-$(if [ ! -z "${PROJECT_GITHUB_URL}" ]; then
-    echo ""
-    echo "- [GitHub Repo](${PROJECT_GITHUB_URL})";
-else
-    echo " ";
-fi)
+ifdef(`PARAMS', `include(PARAMS)')
+ifdef(`PROJECT_DESCRIPTION', `PROJECT_DESCRIPTION', `Doing whatever')
+
+ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Repo](https://github.com/tsoding)')
 - [Twitter](https://twitter.com/tsoding)
 - [Twitch](http://www.twitch.tv/tsoding)
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)

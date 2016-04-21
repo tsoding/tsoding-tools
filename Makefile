@@ -3,8 +3,8 @@ YOUTUBE_PROFILES=$(shell ls params/ | xargs -Ixx echo "profiles/xx-Profile-Youtu
 
 all: Makefile $(GENERAL_PROFILES) $(YOUTUBE_PROFILES)
 
-profiles/%-Profile.md: params/% Profile-Template.md Expand-Template.sh
-	./Expand-Template.sh $< ./Profile-Template.md > $@
+profiles/%-Profile.md: params/% Profile-Template.md.m4
+	  m4 -DPARAMS=$< ./Profile-Template.md.m4 > $@
 
 profiles/%-Profile-Youtube.md: profiles/%-Profile.md
 	sed "s/\\[\\(.*\\)\\](\\(.*\\))/\\1: \\2/" $< > $@
