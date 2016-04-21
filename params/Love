@@ -1,0 +1,1 @@
+define(PROJECT_DESCRIPTION, `Learning LÖVE game engine along with Lua')
