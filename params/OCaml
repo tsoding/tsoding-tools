@@ -1,1 +1,2 @@
+# -*- mode: m4 -*-
 define(PROJECT_DESCRIPTION, `Playing with OCaml')

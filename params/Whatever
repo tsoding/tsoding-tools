@@ -1,2 +1,3 @@
+# -*- mode: m4 -*-
 define(PROJECT_DESCRIPTION, `Working on whatever')
 define(PROJECT_GITHUB_URL, `https://github.com/tsoding')
