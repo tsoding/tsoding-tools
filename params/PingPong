@@ -1,0 +1,3 @@
+# -*- mode: m4 -*-
+define(PROJECT_DESCRIPTION, `Implementing a simple Ping Pong game with LÖVE game engine')
+define(PROJECT_GITHUB_URL, `https://github.com/tsoding/ping-pong-love')
