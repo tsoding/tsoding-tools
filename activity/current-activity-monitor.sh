@@ -6,7 +6,7 @@
 
 REST_API_URL="https://api.github.com/repos/tsoding/voronoi-diagram/issues?labels=in+progress"
 JSON_JQ_EXTRACTOR=".[0].title"
-POLLING_INTERVAL=60
+POLLING_INTERVAL=10
 
 set -x
 
