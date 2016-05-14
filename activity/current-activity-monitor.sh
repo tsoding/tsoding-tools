@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
-REST_API_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
-JSON_JQ_EXTRACTOR=".[0].name"
+# REST_API_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
+# JSON_JQ_EXTRACTOR=".[0].name"
+
+REST_API_URL="https://api.github.com/repos/tsoding/voronoi-diagram/issues?labels=in+progress"
+JSON_JQ_EXTRACTOR=".[0].title"
 
 set -x
 
