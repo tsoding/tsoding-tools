@@ -4,7 +4,7 @@
 # JSON_JQ_EXTRACTOR=".[0].name"
 # POLLING_INTERVAL=10
 
-REST_API_URL="https://api.github.com/repos/tsoding/voronoi-diagram/issues?labels=in+progress"
+REST_API_URL="https://api.github.com/repos/tsoding/voronoi-diagram/issues?access_token=$ACCESS_TOKEN&labels=in+progress"
 JSON_JQ_EXTRACTOR=".[0].title"
 POLLING_INTERVAL=10
 
