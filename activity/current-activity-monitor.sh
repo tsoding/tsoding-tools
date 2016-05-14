@@ -2,9 +2,11 @@
 
 # REST_API_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
 # JSON_JQ_EXTRACTOR=".[0].name"
+# POLLING_INTERVAL=10
 
 REST_API_URL="https://api.github.com/repos/tsoding/voronoi-diagram/issues?labels=in+progress"
 JSON_JQ_EXTRACTOR=".[0].title"
+POLLING_INTERVAL=60
 
 set -x
 
@@ -16,5 +18,5 @@ while true; do
     else
         echo "Farting" >> current-activity.txt
     fi
-    sleep 10
+    sleep "$POLLING_INTERVAL"
 done
