@@ -10,7 +10,7 @@ ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Re
 
 Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 
-#### FAQ
+# FAQ
 
 - **Q: What OS are you using?**
 - A: It's [NixOS](https://nixos.org/) a distribution of Linux
