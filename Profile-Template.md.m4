@@ -10,4 +10,9 @@ ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Re
 
 Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 
-Join our Russian Programming Community called TsodingTeam (it's actually CodingTeam, but we like to pronounce it like TsodingTeam :P): xmpp:codingteam@conference.jabber.ru
+#### FAQ
+
+- **Q: What OS are you using?**
+- A: It's [NixOS](https://nixos.org/) a distribution of Linux
+
+Join our Russian Programming Community called TsodingTeam xmpp:codingteam@conference.jabber.ru (it's actually CodingTeam, but we like to pronounce it like TsodingTeam :P)
