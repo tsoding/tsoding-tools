@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
 
+## General parameters
+POLLING_INTERVAL=10
+GITHUB_PROJECT="tsoding/tictacrust"
+
+# # Trello parameters
 # REST_API_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
 # JSON_JQ_EXTRACTOR=".[0].name"
-# POLLING_INTERVAL=10
 
-REST_API_URL="https://api.github.com/repos/tsoding/voronoi-diagram/issues?access_token=$ACCESS_TOKEN&labels=in+progress"
+# # Github Parameters
+REST_API_URL="https://api.github.com/repos/${GITHUB_PROJECT}/issues?access_token=$ACCESS_TOKEN&labels=in+progress"
 JSON_JQ_EXTRACTOR=".[0].title"
-POLLING_INTERVAL=10
 
 set -x
 
