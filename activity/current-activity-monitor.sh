@@ -2,7 +2,7 @@
 
 ## General parameters
 POLLING_INTERVAL=10
-GITHUB_PROJECT="tsoding/tictacrust"
+GITHUB_PROJECT="tsoding/midi-looper"
 
 # # Trello parameters
 # REST_API_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
