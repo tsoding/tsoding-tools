@@ -2,7 +2,8 @@
 
 ## General parameters
 POLLING_INTERVAL=10
-GITHUB_PROJECT="tsoding/midi-looper"
+# GITHUB_PROJECT="tsoding/midi-looper"
+GITHUB_PROJECT="rexim/Morganey"
 
 # # Trello parameters
 # REST_API_URL="https://trello.com/1/list/56acc96e751324399cea0ce1/cards"
