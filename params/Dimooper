@@ -1,0 +1,3 @@
+# -*- mode: m4 -*-
+define(PROJECT_DESCRIPTION, `Developing a Digital Music looper in Rust')
+define(PROJECT_GITHUB_URL, `https://github.com/tsoding/dimooper')

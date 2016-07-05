@@ -1,3 +1,0 @@
-# -*- mode: m4 -*-
-define(PROJECT_DESCRIPTION, `Developing a MIDI looper in Rust')
-define(PROJECT_GITHUB_URL, `https://github.com/tsoding/midi-looper')
