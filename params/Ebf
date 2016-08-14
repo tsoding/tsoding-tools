@@ -1,3 +1,3 @@
-# -*- mode: m4 -*-
+dnl -*- mode: m4 -*-
 define(PROJECT_DESCRIPTION, `Developing a brainfuck compiler to Emacs Lisp')
 define(PROJECT_GITHUB_URL, `https://github.com/rexim/ebf')

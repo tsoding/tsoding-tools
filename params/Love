@@ -1,2 +1,2 @@
-# -*- mode: m4 -*-
+dnl -*- mode: m4 -*-
 define(PROJECT_DESCRIPTION, `Learning LÖVE game engine along with Lua')
