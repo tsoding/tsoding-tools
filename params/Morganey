@@ -1,3 +1,4 @@
 # -*- mode: m4 -*-
 define(PROJECT_DESCRIPTION, `Developing a Lambda Calculus based programming language')
 define(PROJECT_GITHUB_URL, `https://github.com/rexim/Morganey')
+define(PROJECT_WAFFLE_URL, `https://waffle.io/rexim/Morganey')
