@@ -1,3 +1,4 @@
 dnl -*- mode: m4 -*-
 define(PROJECT_DESCRIPTION, `Developing a musical puzzle game')
 define(PROJECT_GITHUB_URL, `https://github.com/rexim/Beatwave')
+define(PROJECT_WAFFLE_URL, `https://waffle.io/rexim/beatwave')
