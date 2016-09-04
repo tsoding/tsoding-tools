@@ -16,4 +16,7 @@ Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 - **Q: What OS are you using?**
 - A: It's [NixOS](https://nixos.org/) a distribution of Linux
 
+- **Q: Ты русский/говоришь по-русски?**
+- A: Да
+
 Join our Russian Programming Community called TsodingTeam xmpp:codingteam@conference.jabber.ru (it's actually CodingTeam, but we like to pronounce it like TsodingTeam :P)
