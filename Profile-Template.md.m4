@@ -19,7 +19,7 @@ Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 ---
 
 - **Q: Ты русский/говоришь по-русски?**
-- A: Да
+- A: Да. Но на стриме предпочитаю говорить по-английски.
 
 ---
 
