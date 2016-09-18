@@ -24,6 +24,6 @@ Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 ---
 
 - **Q: Is it raining?**
-- A: No, it's http://noisli.com/
+- A: No, it's [noisli](http://noisli.com/)
 
 Join our Russian Programming Community called TsodingTeam xmpp:codingteam@conference.jabber.ru (it's actually CodingTeam, but we like to pronounce it like TsodingTeam :P)
