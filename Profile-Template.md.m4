@@ -1,6 +1,6 @@
 ifdef(`PARAMS', `include(PARAMS)')
 
-ifdef(`PROJECT_TITLE', ``#' PROJECT_TITLE', `dnl')
+`#' ifdef(`PROJECT_TITLE', `PROJECT_TITLE', `Doing whatever')
 
 ifdef(`PROJECT_DESCRIPTION', `PROJECT_DESCRIPTION', `Doing whatever')
 
