@@ -3,6 +3,7 @@ ifdef(`PROJECT_DESCRIPTION', `PROJECT_DESCRIPTION', `Doing whatever')
 
 ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Repo](https://github.com/tsoding)')
 ifdef(`PROJECT_WAFFLE_URL', `- [Waffle Board](PROJECT_WAFFLE_URL)', `dnl')
+ifdef(`PROJECT_GITHUB_BOARD_URL', `- [GitHub Board](PROJECT_GITHUB_BOARD_URL)', `dnl')
 - [Twitter](https://twitter.com/tsoding)
 - [Twitch](http://www.twitch.tv/tsoding)
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
