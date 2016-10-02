@@ -1,6 +1,8 @@
 ifdef(`PARAMS', `include(PARAMS)')
 ifdef(`PROJECT_DESCRIPTION', `PROJECT_DESCRIPTION', `Doing whatever')
 
+ifdef(`PROJECT_TITLE', ``#' PROJECT_TITLE', `dnl')
+
 ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Repo](https://github.com/tsoding)')
 ifdef(`PROJECT_WAFFLE_URL', `- [Waffle Board](PROJECT_WAFFLE_URL)', `dnl')
 ifdef(`PROJECT_GITHUB_BOARD_URL', `- [GitHub Board](PROJECT_GITHUB_BOARD_URL)', `dnl')
