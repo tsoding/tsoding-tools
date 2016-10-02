@@ -7,7 +7,6 @@ ifdef(`PROJECT_WAFFLE_URL', `- [Waffle Board](PROJECT_WAFFLE_URL)', `dnl')
 - [Twitch](http://www.twitch.tv/tsoding)
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
 - [LCTV](https://www.livecoding.tv/rexim/)
-- [Trello](https://trello.com/b/8mA1y1bP/morning-tsoding)
 
 Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
 
