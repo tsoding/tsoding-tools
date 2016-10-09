@@ -1,6 +1,6 @@
 dnl -*- mode: m4 -*-
 define(PROJECT_TITLE, `Morganey Programming Language')dnl
 define(PROJECT_DESCRIPTION, `Developing a Lambda Calculus based programming language called Morganey')dnl
-define(PROJECT_GITHUB_URL, `https://github.com/rexim/Morganey')dnl
+define(PROJECT_GITHUB_URL, `https://github.com/morganey-lang/Morganey')dnl
 dnl define(PROJECT_WAFFLE_URL, `https://waffle.io/rexim/Morganey')dnl
 define(PROJECT_GITHUB_BOARD_URL, `https://github.com/morganey-lang/Morganey/projects/1')dnl
