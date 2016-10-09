@@ -1,13 +1,18 @@
 #!/bin/sh
 
-now=$(date +%s)sec
+if [ -z "$1" ]; then
+    now=$(date +%s)sec
+else
+    now="$1"
+fi
+
 logFile="./stopwatch-${now}.log"
 
 function log {
     echo "$1" | tee -a "${logFile}"
 }
 
-log "${now}"
+echo "${now}"
 
 while true; do 
     read
