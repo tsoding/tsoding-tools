@@ -15,6 +15,15 @@ function log {
 echo "${now}"
 
 while true; do 
-    read
-    log "$(TZ=UTC date --date now-$now +%H:%M:%S.%N)"
+    echo -n "> "
+    read command
+    case "${command}" in
+        "cut")
+            log "$(TZ=UTC date --date now-$now +%H:%M:%S.%N)"
+        ;;
+
+        *)
+            echo "'${command}' unrecognized command"
+        ;;
+    esac
 done
