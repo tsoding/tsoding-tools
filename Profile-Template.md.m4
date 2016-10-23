@@ -11,7 +11,7 @@ ifdef(`PROJECT_GITHUB_BOARD_URL', `- [GitHub Board](PROJECT_GITHUB_BOARD_URL)', 
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
 - [LCTV](https://www.livecoding.tv/rexim/)
 
-Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT.
+Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT. For more info please see the [Public Google Calendar](https://calendar.google.com/calendar/embed?src=knnbf89n7lna1q3is3nacpd054@group.calendar.google.com&ctz=Asia/Krasnoyarsk&pli=1)
 
 # FAQ
 
