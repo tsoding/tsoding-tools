@@ -28,6 +28,11 @@ Stream days: Tuesday, Thursday, Sunday. The time is usually 10.00 NOVT. For more
 - **Q: Is it raining?**
 - A: No, it's [noisli](http://noisli.com/)
 
+---
+
+- **Q: What's the music playing at the beginning?**
+- A: Here's my [Intro Playlist](https://www.youtube.com/playlist?list=PLguYJK7ydFE6Y_z14C9kGUlrCruxrO30Z) Please follow the artists, they're amazing.
+
 # TsodingTeam
 
 Join our Russian Programming Community called TsodingTeam xmpp:codingteam@conference.jabber.ru (it's actually CodingTeam, but we like to pronounce it like TsodingTeam :P)
