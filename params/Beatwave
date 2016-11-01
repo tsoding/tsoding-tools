@@ -1,5 +1,5 @@
 dnl -*- mode: m4 -*-
-define(PROJECT_TITLE, `Beatwave — Musical Puzzle Game and Animation Framework')dnl
+define(PROJECT_TITLE, `Beatwave')dnl
 define(PROJECT_DESCRIPTION, `Developing musical puzzle game and animation framework called Beatwave')dnl
 define(PROJECT_GITHUB_URL, `https://github.com/rexim/Beatwave')dnl
 dnl define(PROJECT_WAFFLE_URL, `https://waffle.io/rexim/beatwave')dnl
