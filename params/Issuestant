@@ -1,5 +1,5 @@
 dnl -*- mode: m4 -*-
-define(PROJECT_TITLE, `Issuestant — Issue tracker assistant')dnl
+define(PROJECT_TITLE, `Issuestant')dnl
 define(PROJECT_DESCRIPTION, `Implementing issue tracker assistant')dnl
 define(PROJECT_GITHUB_URL, `https://github.com/tsoding/issuestant')dnl
 define(PROJECT_GITHUB_BOARD_URL, `https://github.com/tsoding/issuestant/projects/1')dnl
