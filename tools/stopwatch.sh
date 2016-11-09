@@ -2,8 +2,11 @@
 
 if [ -z "$1" ]; then
     now=$(date +%s)sec
-else
+elif [ -f "$1" ]; then
     now=$(basename "$1")
+else
+    echo "Cannot write to $1"
+    exit 1
 fi
 
 logFile="./${now}"
