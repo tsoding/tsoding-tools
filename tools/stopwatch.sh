@@ -3,10 +3,10 @@
 if [ -z "$1" ]; then
     now=$(date +%s)sec
 else
-    now="$1"
+    now=$(basename "$1")
 fi
 
-logFile="./stopwatch-${now}.log"
+logFile="./${now}"
 
 function log {
     echo "$1" | tee -a "${logFile}"
