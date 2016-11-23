@@ -1,5 +1,13 @@
 ifdef(`PARAMS', `include(PARAMS)')dnl
-# Tsoding
+`#' ifdef(`PROJECT_TITLE', `Current Project — PROJECT_TITLE', `Doing whatever')
+
+ifdef(`PROJECT_DESCRIPTION', `PROJECT_DESCRIPTION', `Doing whatever')
+
+ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Repo](https://github.com/tsoding)')
+ifdef(`PROJECT_WAFFLE_URL', `- [Kanban Board](PROJECT_WAFFLE_URL)', `dnl')
+ifdef(`PROJECT_GITHUB_BOARD_URL', `- [Kanban Board](PROJECT_GITHUB_BOARD_URL)', `dnl')
+
+# Tsoding on the Internets
 
 - [GitHub](https://github.com/tsoding)
 - [Twitter](https://twitter.com/tsoding)
@@ -7,14 +15,6 @@ ifdef(`PARAMS', `include(PARAMS)')dnl
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
 - [LCTV](https://www.livecoding.tv/rexim/)
 - [Patreon](https://www.patreon.com/tsoding)
-
-`#' ifdef(`PROJECT_TITLE', `PROJECT_TITLE', `Doing whatever')
-
-ifdef(`PROJECT_DESCRIPTION', `PROJECT_DESCRIPTION', `Doing whatever')
-
-ifdef(`PROJECT_GITHUB_URL', `- [GitHub Repo](PROJECT_GITHUB_URL)', `- [GitHub Repo](https://github.com/tsoding)')
-ifdef(`PROJECT_WAFFLE_URL', `- [Waffle Board](PROJECT_WAFFLE_URL)', `dnl')
-ifdef(`PROJECT_GITHUB_BOARD_URL', `- [GitHub Board](PROJECT_GITHUB_BOARD_URL)', `dnl')
 
 # Schedule
 
