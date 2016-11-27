@@ -1,3 +1,2 @@
 - YT: http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg/live
-- LCTV: https://www.livecoding.tv/rexim/
 - Twitch: http://www.twitch.tv/tsoding
