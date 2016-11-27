@@ -13,7 +13,6 @@ ifdef(`PROJECT_GITHUB_BOARD_URL', `- [Kanban Board](PROJECT_GITHUB_BOARD_URL)', 
 - [Twitter](https://twitter.com/tsoding)
 - [Twitch](http://www.twitch.tv/tsoding)
 - [Youtube](http://www.youtube.com/channel/UCEbYhDd6c6vngsF5PQpFVWg)
-- [LCTV](https://www.livecoding.tv/rexim/)
 - [Patreon](https://www.patreon.com/tsoding)
 
 # Schedule
