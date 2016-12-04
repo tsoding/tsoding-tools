@@ -1,5 +1,5 @@
 dnl -*- mode: m4 -*-
-define(PROJECT_TITLE, `Dimooper — Digital Music Looper')dnl
+define(PROJECT_TITLE, `Dimooper')dnl
 define(PROJECT_DESCRIPTION, `Developing Digital Music Looper in Rust')dnl
 define(PROJECT_GITHUB_URL, `https://github.com/tsoding/dimooper')dnl
 dnl define(PROJECT_WAFFLE_URL, `https://waffle.io/tsoding/dimooper')dnl
