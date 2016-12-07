@@ -20,7 +20,7 @@ def secs_to_frames(table, fps):
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print "Usage: ./stopwatch-secs-to-frames.py <stopwatch-log> <fps>"
+        print "Usage: ./secs-to-frames.py <stopwatch-log> <fps>"
         exit(1)
 
     csv_file_name = sys.argv[1]
