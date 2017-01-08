@@ -17,18 +17,30 @@ def read_stopwatch(stopwatch_file):
         return [[comment, int(secs)] for [comment, secs] in csvreader]
 
 
+def seconds_to_timestamp(seconds):
+    """Convert seconds to a human-readable timestamp"""
+    ss = seconds % 60
+    mm = seconds / 60 % 60
+    hh = seconds / 60 / 60
+    return '%d:%d:%d' % (hh, mm, ss)
+
+
 def stopwatch_to_parts(stopwatch):
     result = []
     count = 1
+    current_time = 0
     for chunk in chunks(stopwatch, 2):
         if len(chunk) == 2:
             [[_, begin], [_, end]] = chunk
+            length = end - begin + 1
             result.append({
                 'begin': begin,
-                'length': end - begin + 1,
-                'filename': 'part-%d.ts' % (count)
+                'length': length,
+                'filename': 'part-%d.ts' % (count),
+                'timestamp': seconds_to_timestamp(current_time)
             })
             count += 1
+            current_time += length
     return result
 
 

@@ -2,6 +2,7 @@
 	ffmpeg -i "concat:{{ parts_concat_list }}" -c copy {{ morning_output }}
 
 {% for part in parts %}
+# {{ part.timestamp }}
 {{ part.filename }}: morning-delayed.ts
 	ffmpeg -ss {{ part.begin }} -i morning-delayed.ts -t {{ part.length }} -c copy {{ part.filename }}
 {% endfor %}
