@@ -1,0 +1,4 @@
+title: Boids in Haskell
+description: Implementing Boids in Haskell. See [boids](http://www.red3d.com/cwr/boids/)
+github_url: https://github.com/tsoding/boids
+board_url: https://github.com/tsoding/boids/projects/1
