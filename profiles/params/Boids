@@ -1,5 +1,0 @@
-dnl -*- mode: m4 -*-
-define(PROJECT_TITLE, `Boids in Haskell')dnl
-define(PROJECT_DESCRIPTION, `Implementing Boids in Haskell. See [boids](http://www.red3d.com/cwr/boids/)')dnl
-define(PROJECT_GITHUB_URL, `https://github.com/tsoding/boids')dnl
-define(PROJECT_GITHUB_BOARD_URL, `https://github.com/tsoding/boids/projects/1')dnl

@@ -1,6 +1,0 @@
-dnl -*- mode: m4 -*-
-define(PROJECT_TITLE, `AlgoTsoding')dnl
-define(PROJECT_DESCRIPTION, `Learning Algorithms and Data Structures Together')dnl
-define(PROJECT_GITHUB_URL, `https://github.com/tsoding/algotsoding')dnl
-dnl define(PROJECT_WAFFLE_URL, `https://waffle.io/rexim/beatwave')dnl
-dnl define(PROJECT_GITHUB_BOARD_URL, `https://github.com/rexim/Beatwave/projects/1')dnl
