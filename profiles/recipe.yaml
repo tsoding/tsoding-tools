@@ -7,3 +7,5 @@ projects:
 templates:
   - Stream
   - Recording
+filters:
+  - Youtube
