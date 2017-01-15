@@ -1,5 +1,5 @@
 import sys
-import json
+import yaml
 from os import path
 from jinja2 import Environment, PackageLoader
 
@@ -12,10 +12,10 @@ def usage():
 
 
 def get_project_params(project_name):
-    project_file_name = project_name + ".json"
+    project_file_name = project_name + ".yaml"
     project_file_path = path.join(PROJECTS_PATH, project_file_name)
     with open(project_file_path, "r") as project_file:
-        return json.loads(project_file.read())
+        return yaml.load(project_file.read())
 
 
 if __name__ == '__main__':
