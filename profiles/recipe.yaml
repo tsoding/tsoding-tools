@@ -1,0 +1,11 @@
+projects:
+  - Morganey
+  - Beatwave
+  - Boids
+  - Dimooper
+  - Issuestant
+templates:
+  - Stream
+  - Recording
+filters:
+  - Youtube
