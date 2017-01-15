@@ -2,8 +2,8 @@
 
 import sys
 import yaml
-import codecs
 import re
+from easyfile import read_file, write_file
 from os import path
 from jinja2 import Environment, PackageLoader
 
@@ -18,16 +18,6 @@ def usage():
 
 def youtube_filter(text):
     return re.sub('\[(.*)\]\((.*)\)', '\\1: \\2', text)
-
-
-def read_file(file_path):
-    with codecs.open(file_path, "r", "utf-8") as f:
-        return f.read()
-
-
-def write_file(file_path, text):
-    with codecs.open(file_path, "w+", "utf-8") as f:
-        f.write(text)
 
 
 def get_project_params(project_name):
