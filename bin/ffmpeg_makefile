@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TSODING_TOOLS_DIR="${SCRIPT_DIR}/.."
+
+"${TSODING_TOOLS_DIR}/venv/bin/python" "${TSODING_TOOLS_DIR}/ffmpeg-edit/ffmpeg_makefile.py" $@
