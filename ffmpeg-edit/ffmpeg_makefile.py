@@ -45,7 +45,7 @@ def stopwatch_to_parts(stopwatch):
 
 
 def usage():
-    print "Usage: makefile.py <morning-input> <stopwatch> <morning-output>"
+    print "Usage: ffmpeg_makefile <morning-input> <stopwatch> <morning-output>"
 
 
 if __name__ == '__main__':
