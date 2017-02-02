@@ -16,7 +16,7 @@ def usage():
     print 'Usage: profiles.py <recipe>'
 
 
-def youtube_filter(text):
+def unmarkdown_links(text):
     return re.sub('\[(.*)\]\((.*)\)', '\\1: \\2', text)
 
 
@@ -27,24 +27,28 @@ def get_project_params(project_name):
 
 
 def apply_filter(text, filter_name):
-    if filter_name == 'Youtube':
-        return youtube_filter(text)
+    if filter_name == 'Unmarkdown':
+        return unmarkdown_links(text)
 
     return text
 
 
+def profile_file_name(project_name, template_name, filter_name):
+    return "%s-%s-%s.md" % (project_name, template_name, filter_name)
+
+
+def profile_file_path(project_name, template_name, filter_name):
+    return path.join(OUTPUT_PATH,
+                     profile_file_name(project_name,
+                                       template_name,
+                                       filter_name))
+
+
 def render_profile(project_name, template_name, filter_name):
-    profile_file_name = "%s-%s-%s.md" % (project_name,
-                                         template_name,
-                                         filter_name)
-    profile_file_path = path.join(OUTPUT_PATH, profile_file_name)
     project_params = get_project_params(project_name)
     template = env.get_template('%s.jinja2' % (template_name))
 
-    print "Rendering %s" % (profile_file_path)
-
-    write_file(profile_file_path,
-               apply_filter(template.render(project_params), filter_name))
+    return apply_filter(template.render(project_params), filter_name)
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
@@ -56,6 +60,13 @@ if __name__ == '__main__':
     for filter_name in [None] + recipe['filters']:
         for project_name in recipe['projects']:
             for template_name in recipe['templates']:
-                render_profile(project_name,
-                               template_name,
-                               filter_name)
+                output_file_path = profile_file_path(project_name,
+                                                     template_name,
+                                                     filter_name)
+
+                print "Rendering %s" % (output_file_path)
+
+                write_file(output_file_path,
+                           render_profile(project_name,
+                                          template_name,
+                                          filter_name))
