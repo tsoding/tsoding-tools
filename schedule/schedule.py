@@ -2,6 +2,8 @@ import sys
 from datetime import date, timedelta
 from easyfile import read_yaml_file, write_csv_file
 
+MAX_MONTH_DAYS = 32
+
 
 def weekday_number(day_name):
     return [
@@ -26,8 +28,6 @@ def schedule_event(event_date, event_time, project):
 
 
 def schedule_month(month, year, recipe):
-    # TODO: scroll through available projects in the recipe
-
     stream_week_days = set(map(weekday_number, recipe['days']))
 
     def is_stream_date(d):
@@ -36,10 +36,10 @@ def schedule_month(month, year, recipe):
     month_start = date(year, month, 1)
     stream_dates = filter(is_stream_date,
                           [month_start + timedelta(days=i)
-                           for i in range(1, 32)])
+                           for i in range(1, MAX_MONTH_DAYS)])
 
-    return map(lambda d: schedule_event(d, recipe['time'], 'Boids'),
-               stream_dates)
+    return map(lambda (project, d): schedule_event(d, recipe['time'], project),
+               zip(recipe['projects'] * MAX_MONTH_DAYS, stream_dates))
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
@@ -49,4 +49,4 @@ if __name__ == '__main__':
     recipe = read_yaml_file(sys.argv[1])
     today = date.today()
     write_csv_file('schedule.csv',
-                   schedule_month(today.month, today.year, recipe))
+                   schedule_month(today.month + 1, today.year, recipe))
