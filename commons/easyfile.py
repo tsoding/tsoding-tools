@@ -28,7 +28,7 @@ def write_csv_file(file_path, table):
 
     fieldnames = table[0].keys()
 
-    with open(file_path, 'w') as csvfile:
+    with codecs.open(file_path, "w+", "utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for row in table:

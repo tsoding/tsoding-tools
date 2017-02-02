@@ -16,7 +16,7 @@ def usage():
     print 'Usage: profiles.py <recipe>'
 
 
-def youtube_filter(text):
+def unmarkdown_links(text):
     return re.sub('\[(.*)\]\((.*)\)', '\\1: \\2', text)
 
 
@@ -28,7 +28,7 @@ def get_project_params(project_name):
 
 def apply_filter(text, filter_name):
     if filter_name == 'Youtube':
-        return youtube_filter(text)
+        return unmarkdown_links(text)
 
     return text
 

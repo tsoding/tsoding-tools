@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
+
 import sys
 from datetime import date, timedelta
 from easyfile import read_yaml_file, write_csv_file
+from profiles import get_project_params, unmarkdown_links
+
 
 MAX_MONTH_DAYS = 32
 
@@ -17,13 +21,13 @@ def usage():
 
 
 def schedule_event(event_date, event_time, project):
-    # TODO: compose proper description extracted from the project
-    # profile
+    project_params = get_project_params(project)
 
     return {
-        'Subject': project,
+        'Subject': '%s -- Morning Tsoding' % (project_params['title']),
         'Start date': event_date.strftime('%d/%m/%Y'),
-        'Start time': event_time
+        'Start time': event_time,
+        'Description': unmarkdown_links(project_params['description'])
     }
 
 
@@ -49,4 +53,4 @@ if __name__ == '__main__':
     recipe = read_yaml_file(sys.argv[1])
     today = date.today()
     write_csv_file('schedule.csv',
-                   schedule_month(today.month + 1, today.year, recipe))
+                   schedule_month(today.month, today.year, recipe))

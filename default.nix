@@ -8,6 +8,6 @@ with import <nixpkgs> {}; {
         ./venv/bin/pip install -r requirements.txt
       fi
     '';
-    PYTHONPATH = "./commons/";
+    PYTHONPATH = "./commons/:./profiles/";
   };
 }
