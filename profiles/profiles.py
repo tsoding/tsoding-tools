@@ -27,7 +27,7 @@ def get_project_params(project_name):
 
 
 def apply_filter(text, filter_name):
-    if filter_name == 'Youtube':
+    if filter_name == 'Unmarkdown':
         return unmarkdown_links(text)
 
     return text

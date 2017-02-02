@@ -3,7 +3,7 @@
 import sys
 from datetime import date, timedelta
 from easyfile import read_yaml_file, write_csv_file
-from profiles import get_project_params, unmarkdown_links
+from profiles import render_profile, get_project_params
 
 
 MAX_MONTH_DAYS = 32
@@ -20,15 +20,14 @@ def usage():
     print 'Usage: schedule <recipe.yaml>'
 
 
-def schedule_event(event_date, event_time, project):
-    project_params = get_project_params(project)
+def schedule_event(event_date, event_time, project_name):
+    project_params = get_project_params(project_name)
 
     return {
         'Subject': '%s -- Morning Tsoding' % (project_params['title']),
         'Start date': event_date.strftime('%d/%m/%Y'),
         'Start time': event_time,
-        # TODO: Implement profiles template for Schedule
-        'Description': unmarkdown_links(project_params['description'])
+        'Description': render_profile(project_name, 'Schedule', 'Unmarkdown')
     }
 
 

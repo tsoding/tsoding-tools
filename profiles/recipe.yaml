@@ -8,4 +8,4 @@ templates:
   - Stream
   - Recording
 filters:
-  - Youtube
+  - Unmarkdown
