@@ -27,6 +27,7 @@ def schedule_event(event_date, event_time, project):
         'Subject': '%s -- Morning Tsoding' % (project_params['title']),
         'Start date': event_date.strftime('%d/%m/%Y'),
         'Start time': event_time,
+        # TODO: Implement profiles template for Schedule
         'Description': unmarkdown_links(project_params['description'])
     }
 
