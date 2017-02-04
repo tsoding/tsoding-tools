@@ -1,2 +1,2 @@
-- YT: http://www.youtube.com/tsoding/live
+- YouTube: http://www.youtube.com/tsoding/live
 - Twitch: http://www.twitch.tv/tsoding
