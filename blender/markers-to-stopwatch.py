@@ -4,8 +4,9 @@ import csv
 
 scene = bpy.context.scene
 
-fps = scene.render.fps
-fps_base = scene.render.fps_base
+# fps = scene.render.fps
+# fps_base = scene.render.fps_base
+fps = 20
 
 
 def write_csv(csv_table, csv_file_name):
