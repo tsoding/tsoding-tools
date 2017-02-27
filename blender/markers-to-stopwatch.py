@@ -1,8 +1,13 @@
-# Stolen and adapted from http://blenderscripting.blogspot.ru/2013/06/keyframes-and-timeline-markers.html
 import bpy
 import csv
+from os import path
 
 scene = bpy.context.scene
+blender_filepath = bpy.data.filepath
+stopwatch_filename = "stopwatch.csv"
+stopwatch_filepath = path.join(path.dirname(blender_filepath),
+                               stopwatch_filename)
+
 
 # fps = scene.render.fps
 # fps_base = scene.render.fps_base
@@ -23,4 +28,4 @@ def frame_to_time(frame_number):
 
 write_csv([(label, frame_to_time(marker.frame))
            for label, marker in scene.timeline_markers.items()],
-          "stopwatch.csv")
+          stopwatch_filepath)
