@@ -1,7 +1,9 @@
 days:
   - sat
-time: 09:00 PM
+  - wed
+time: 10:00 PM
 projects:
-  - Boids
+  - Issuestant
   - Dimooper
   - Morganey
+  - Boids
