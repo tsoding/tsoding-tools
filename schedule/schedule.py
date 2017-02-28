@@ -7,6 +7,7 @@ from profiles import render_profile, get_project_params
 
 
 MAX_MONTH_DAYS = 32
+output_filename = 'schedule.csv'
 
 
 def weekday_number(day_name):
@@ -17,7 +18,7 @@ def weekday_number(day_name):
 
 
 def usage():
-    print 'Usage: schedule <recipe.yaml>'
+    print 'Usage: schedule <recipe.yaml> [months-forward]'
 
 
 def schedule_event(event_date, event_time, project_name):
@@ -38,9 +39,10 @@ def schedule_month(month, year, recipe):
         return (d.month == month) and (d.weekday() in stream_week_days)
 
     month_start = date(year, month, 1)
+
     stream_dates = filter(is_stream_date,
                           [month_start + timedelta(days=i)
-                           for i in range(1, MAX_MONTH_DAYS)])
+                           for i in range(MAX_MONTH_DAYS)])
 
     return map(lambda (project, d): schedule_event(d, recipe['time'], project),
                zip(recipe['projects'] * MAX_MONTH_DAYS, stream_dates))
@@ -51,6 +53,11 @@ if __name__ == '__main__':
         exit(1)
 
     recipe = read_yaml_file(sys.argv[1])
-    today = date.today()
-    write_csv_file('schedule.csv',
-                   schedule_month(today.month, today.year, recipe))
+    plus_months = 0
+    if len(sys.argv) > 2:
+        plus_months = int(sys.argv[2])
+
+    today = date.today() + timedelta(weeks=plus_months * 4)
+    schedule = schedule_month(today.month, today.year, recipe)
+    write_csv_file(output_filename, schedule)
+    print 'Wrote to %s' % (output_filename)
