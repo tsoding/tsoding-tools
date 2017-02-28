@@ -52,6 +52,7 @@ def schedule_entry(recipe_filepath, output_filename, plus_months=0):
     today = date.today() + timedelta(weeks=plus_months * 4)
     schedule = schedule_month(today.month, today.year, recipe)
     write_csv_file(output_filename, schedule)
+    return schedule
 
 
 if __name__ == '__main__':
