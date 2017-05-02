@@ -1,4 +1,18 @@
-# How to Import Events to Google Calendar
+# Stream Scheduler #
+
+## Usage ##
+
+From the root of the tools
+
+```console
+$ ./venv/bin/python ./schedule/schedule.py ./schedule/recipe.yaml
+Wrote to schedule.csv
+$
+```
+
+Import `schedule.csv` to the Google Calendar
+
+## Import to Google Calendar ##
 
 https://support.google.com/calendar/answer/37118?hl=en
 
