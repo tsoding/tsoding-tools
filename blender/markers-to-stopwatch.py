@@ -11,7 +11,7 @@ stopwatch_filepath = path.join(path.dirname(blender_filepath),
 
 # fps = scene.render.fps
 # fps_base = scene.render.fps_base
-fps = 20
+fps = 30
 
 
 def write_csv(csv_table, csv_file_name):
@@ -26,6 +26,7 @@ def frame_to_time(frame_number):
     return int(raw_time)
 
 
-write_csv([(label, frame_to_time(marker.frame))
-           for label, marker in scene.timeline_markers.items()],
+write_csv(sorted([(label, frame_to_time(marker.frame))
+                  for label, marker in scene.timeline_markers.items()],
+                 key=lambda t: t[1]),
           stopwatch_filepath)
