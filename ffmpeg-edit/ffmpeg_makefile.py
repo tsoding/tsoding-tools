@@ -25,6 +25,11 @@ def seconds_to_timestamp(seconds):
     return '%d:%d:%d' % (hh, mm, ss)
 
 
+def seconds_to_youtube_url(youtube_id, seconds):
+    """Convert seconds to youtube URL with a specific timestamp"""
+    return 'https://youtu.be/%s?t=%d' % (youtube_id, seconds)
+
+
 def stopwatch_to_parts(stopwatch):
     result = []
     count = 1
@@ -43,6 +48,16 @@ def stopwatch_to_parts(stopwatch):
             current_time += length
     return result
 
+
+def print_youtube_cuts(stopwatch, youtube_id):
+    current_time = 0
+    for chunk in chunks(stopwatch, 2):
+        if len(chunk) == 2:
+            [[_, begin], [_, end]] = chunk
+            length = end - begin + 1
+            current_time += length
+            print seconds_to_youtube_url(youtube_id, current_time - 5
+)
 
 def usage():
     print "Usage: ffmpeg_makefile <morning-input> <stopwatch> <morning-output>"

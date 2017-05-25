@@ -8,6 +8,6 @@ with import <nixpkgs> {}; {
         ./venv/bin/pip install -r requirements.txt
       fi
     '';
-    PYTHONPATH = "./commons/:./schedule/:./profiles/";
+    PYTHONPATH = "./commons/:./schedule/:./profiles/:./ffmpeg-edit/";
   };
 }
