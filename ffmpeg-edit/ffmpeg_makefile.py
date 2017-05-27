@@ -17,6 +17,10 @@ def read_stopwatch(stopwatch_file):
         return [[comment, int(secs)] for [comment, secs] in csvreader]
 
 
+def filter_cuts(stopwatch):
+    return filter(lambda stamp: stamp[0] == 'cut', stopwatch)
+
+
 def seconds_to_timestamp(seconds):
     """Convert seconds to a human-readable timestamp"""
     ss = seconds % 60
@@ -69,7 +73,7 @@ if __name__ == '__main__':
         exit(1)
 
     morning_input = sys.argv[1]
-    parts = stopwatch_to_parts(read_stopwatch(sys.argv[2]))
+    parts = stopwatch_to_parts(filter_cuts(read_stopwatch(sys.argv[2])))
     morning_output = sys.argv[3]
 
     render_params = {
