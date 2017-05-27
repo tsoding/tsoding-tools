@@ -8,9 +8,6 @@ from apiclient.errors import HttpError
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 
-MISSING_CLIENT_SECRETS_MESSAGE = ""
-YOUTUBE_SCOPE = "https://www.googleapis.com/auth/youtube"
-
 
 # TODO(bc02b696-9ad8-4572-8faa-58caed05f612): authorization and credential storage
 #
@@ -19,6 +16,7 @@ YOUTUBE_SCOPE = "https://www.googleapis.com/auth/youtube"
 # get those credentials in the first place.
 #
 # For more info see https://developers.google.com/api-client-library/python/guide/aaa_oauth
+
 
 def ytservice_from_credentials(credentials):
     """Constructs YouTube Service"""
