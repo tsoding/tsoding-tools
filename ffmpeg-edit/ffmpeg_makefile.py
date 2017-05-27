@@ -60,8 +60,25 @@ def print_youtube_cuts(stopwatch, youtube_id):
             [[_, begin], [_, end]] = chunk
             length = end - begin + 1
             current_time += length
-            print seconds_to_youtube_url(youtube_id, current_time - 5
-)
+            print seconds_to_youtube_url(youtube_id, current_time - 5)
+
+
+def print_labels(stopwatch):
+    current_time = 0
+    strip_start = None
+    for [comment, secs] in stopwatch:
+        if comment == 'cut':
+            if strip_start is None:
+                strip_start = secs
+            else:
+                current_time += secs - strip_start
+                strip_start = None
+        else:
+            if strip_start is not None:
+                current_time += secs - strip_start
+                strip_start = secs
+                print "%s: %s" % (comment, seconds_to_timestamp(current_time))
+
 
 def usage():
     print "Usage: ffmpeg_makefile <morning-input> <stopwatch> <morning-output>"
