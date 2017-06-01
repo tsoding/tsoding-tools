@@ -1,4 +1,8 @@
 {{ description }}
 
+{%- if github_url is defined %}
 - [GitHub Repo]({{ github_url }})
+{%- endif %}
+{%- if github_url is defined %}
 - [Planned Issues]({{ board_url }})
+{%- endif %}
