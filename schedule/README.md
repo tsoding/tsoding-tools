@@ -5,9 +5,9 @@
 From the root of the tools
 
 ```console
-$ ./venv/bin/python ./schedule/schedule.py ./schedule/recipe.yaml
-Wrote to schedule.csv
-$
+$ ./venv/bin/ipython
+> from schedule import schedule
+> schedule(recipe_filepath='./schedule/recipe.yaml')
 ```
 
 Import `schedule.csv` to the Google Calendar

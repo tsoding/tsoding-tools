@@ -47,24 +47,12 @@ def schedule_month(month, year, recipe):
                zip(recipe['projects'] * MAX_MONTH_DAYS, stream_dates))
 
 
-def schedule_entry(recipe_filepath, output_filename, plus_months=0):
+def schedule(recipe_filepath,
+             output_filename='schedule.csv',
+             plus_months=0):
+    """Produces a streamming schedule from a recipe file."""
     recipe = read_yaml_file(recipe_filepath)
     today = date.today() + timedelta(weeks=plus_months * 4)
     schedule = schedule_month(today.month, today.year, recipe)
     write_csv_file(output_filename, schedule)
     return schedule
-
-
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        usage()
-        exit(1)
-
-    recipe_filepath = sys.argv[1]
-    output_filename = 'schedule.csv'
-    plus_months = 0
-    if len(sys.argv) > 2:
-        plus_months = int(sys.argv[2])
-
-    schedule_entry(recipe_filepath, output_filename, plus_months)
-    print 'Wrote to %s' % (output_filename)
