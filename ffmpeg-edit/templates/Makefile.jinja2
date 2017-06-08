@@ -1,14 +1,14 @@
 {{ morning_output }}: {{ parts_deps_list }}
-	ffmpeg -i "concat:{{ parts_concat_list }}" -c copy {{ morning_output }}
+	ffmpeg -y -i "concat:{{ parts_concat_list }}" -c copy {{ morning_output }}
 
 {% for part in parts %}
 # {{ part.timestamp }}
-{{ part.filename }}: morning-delayed.ts
-	ffmpeg -ss {{ part.begin }} -i morning-delayed.ts -t {{ part.length }} -c copy {{ part.filename }}
+{{ part.filename }}: {{ morning_input }}.delayed.ts
+	ffmpeg -y -ss {{ part.begin }} -i {{ morning_input }}.delayed.ts -t {{ part.length }} -c copy {{ part.filename }}
 {% endfor %}
 
-morning-delayed.ts: morning-fixed.ts
-	ffmpeg -i "morning-fixed.ts" -itsoffset -0.30 -i "morning-fixed.ts" -map 1:v -map 0:a -vcodec copy -acodec copy "morning-delayed.ts"
+{{ morning_input }}.delayed.ts: {{ morning_input }}.fixed.ts
+	ffmpeg -y -i "{{ morning_input }}.fixed.ts" -itsoffset -0.30 -i "{{ morning_input }}.fixed.ts" -map 1:v -map 0:a -vcodec copy -acodec copy "{{ morning_input }}.delayed.ts"
 
-morning-fixed.ts: {{ morning_input }}
-	ffmpeg -i {{ morning_input }} -codec copy -bsf:v h264_mp4toannexb morning-fixed.ts
+{{ morning_input }}.fixed.ts: {{ morning_input }}
+	ffmpeg -y -i {{ morning_input }} -codec copy -bsf:v h264_mp4toannexb {{ morning_input }}.fixed.ts
