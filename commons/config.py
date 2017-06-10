@@ -2,7 +2,7 @@ from easyfile import read_yaml_file
 from os.path import expanduser
 
 
-# TODO(#18): configuration scheme
+# TODO(#19): configuration scheme
 #
 # Maintain actual configuration scheme and verify it on any
 # configuration loading
