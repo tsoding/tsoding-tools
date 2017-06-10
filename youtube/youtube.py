@@ -12,7 +12,7 @@ from oauth2client.tools import run_flow
 from functional import arrow
 
 
-# TODO: document how to retrieve the client secrets file
+# TODO(#20): document how to retrieve the client secrets file
 def flow_from_config(tsoding_config):
     return flow_from_clientsecrets(
         tsoding_config['youtube']['client_secrets_file'],
