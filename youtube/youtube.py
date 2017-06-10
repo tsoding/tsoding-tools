@@ -7,22 +7,42 @@ from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
+from oauth2client.tools import run_flow
+
+from functional import arrow
 
 
-# TODO(bc02b696-9ad8-4572-8faa-58caed05f612): authorization and credential storage
-#
-# Develop a mechanism for storing and retrieving credentials for
-# ytservice_from_credentials() and authorizing the Tsoding Tools to
-# get those credentials in the first place.
-#
-# For more info see https://developers.google.com/api-client-library/python/guide/aaa_oauth
+# TODO: document how to retrieve the client secrets file
+def flow_from_config(tsoding_config):
+    return flow_from_clientsecrets(
+        tsoding_config['youtube']['client_secrets_file'],
+        scope="https://www.googleapis.com/auth/youtube"
+    )
+
+
+def credentials_from_flow(flow):
+    storage = Storage("%s-oauth2.json" % sys.argv[0])
+    credentials = storage.get()
+
+    if credentials is None or credentials.invalid:
+        credentials = run_flow(flow, storage)
+
+    return credentials
 
 
 def ytservice_from_credentials(credentials):
-    """Constructs YouTube Service"""
+    """Constructs YouTube Service from Credentials"""
     return build("youtube",
                  "v3",
                  http=credentials.authorize(httplib2.Http()))
+
+
+def ytservice_from_config(tsoding_config):
+    """Constructs YouTube Service from Tsoding Config"""
+    return arrow(tsoding_config,
+                 flow_from_config,
+                 credentials_from_flow,
+                 ytservice_from_credentials)
 
 
 # TODO(f2430622-3245-41e3-9761-35b65f40e9fa): implement unlist_playlist_videos()
