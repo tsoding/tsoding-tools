@@ -1,10 +1,8 @@
 ### Basic Usage
 
 ```console
-# from the root of the repo
-./venv/bin/ipython
-> import youtube
+> import yt
 > import config
-> ytservice = youtube.ytservice_from_config(config.home_tsoding_config())
-> youtube.video_ids_of_playlist(ytservice, '<PLAYLIST_ID>')
+> ytservice = yt.ytservice_from_config(config.home_tsoding_config())
+> yt.video_ids_of_playlist(ytservice, '<PLAYLIST_ID>')
 ```
