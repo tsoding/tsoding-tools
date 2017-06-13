@@ -62,6 +62,13 @@ def playlist_video_page(ytservice, playlist_id, page_token):
     ).execute()
 
 
+def video_info(ytservice, video_id, part='snippet'):
+    return ytservice.videos().list(
+        part=part,
+        id=video_id
+    ).execute()
+
+
 def collect_all_pages(next_page):
     current_page = next_page(None)
     yield current_page
