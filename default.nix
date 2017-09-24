@@ -7,6 +7,8 @@ with import <nixpkgs> {}; {
         virtualenv --python=python2.7 venv
         ./venv/bin/pip install -r requirements.txt
       fi
+
+      source ./venv/bin/activate
     '';
     PYTHONPATH = "./commons/:./schedule/:./profiles/:./ffmpeg-edit/:./youtube/";
   };

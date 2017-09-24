@@ -6,5 +6,5 @@ Just a bunch of script I use for my streams
 
 ```console
 $ nix-shell
-$ ./venv/bin/ipython
+$ ipython
 ```
