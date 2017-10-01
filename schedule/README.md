@@ -5,7 +5,7 @@
 From the root of the tools
 
 ```console
-$ ./venv/bin/ipython
+$ ipython
 > from schedule import schedule
 > schedule(recipe_filepath='./schedule/recipe.yaml')
 ```
