@@ -3,8 +3,8 @@
 import sys
 from datetime import date, timedelta
 from easyfile import read_yaml_file, write_csv_file
-from profiles import render_profile, get_project_params
-
+from profiles import render_profile
+from projects import get_project_params
 
 MAX_MONTH_DAYS = 32
 
