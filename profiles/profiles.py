@@ -50,6 +50,7 @@ def render_profile(project_name, template_name, filter_name):
 
     return apply_filter(template.render(project_params), filter_name)
 
+
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         usage()
