@@ -1,3 +1,5 @@
+# -*- mode: makefile -*-
+
 {{ morning_output }}: {{ parts_deps_list }}
 	ffmpeg -y -i "concat:{{ parts_concat_list }}" -c copy {{ morning_output }}
 
