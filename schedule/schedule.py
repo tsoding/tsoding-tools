@@ -16,10 +16,6 @@ def weekday_number(day_name):
     ].index(day_name)
 
 
-def usage():
-    print 'Usage: schedule <recipe.yaml> [months-forward]'
-
-
 def schedule_event(event_date, event_time, project_name):
     project_params = get_project_params(project_name)
 
