@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"This is an old project based scheduler. It's dependent on stuff from profile."
 
 import sys
 from datetime import date, timedelta
