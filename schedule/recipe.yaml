@@ -1,0 +1,20 @@
+- title: Nothing -- Game in C
+  description: >-
+    A simple platformer about nothing. No Engines, no OpenGL, no
+    Box2D. Only C and SDL2.
+
+    GitHub Repo: https://github.com/tsoding/nothing
+  days: [sat, sun]
+- title: YouTube Content
+  description: >-
+    Doing something for Tsoding YouTube channel:
+    https://www.youtube.com/tsoding
+
+    Recording Footages or Trying out ideas
+  days: [tue]
+- title: ChatBot in Haskell
+  description: >-
+    Second iteration of Tsoder. Chat bot for Tsoding streams.
+
+    GitHub Repo: https://github.com/tsoding/hypernerd
+  days: [thu]
