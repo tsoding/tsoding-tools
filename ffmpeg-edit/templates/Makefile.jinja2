@@ -5,12 +5,12 @@
 
 {% for part in parts %}
 # {{ part.timestamp }}
-{{ part.filename }}: {{ morning_input }}.delayed.ts
-	ffmpeg -y -ss {{ part.begin }} -i {{ morning_input }}.delayed.ts -t {{ part.length }} -c copy {{ part.filename }}
+{{ part.filename }}: {{ morning_input }}.fixed.ts
+	ffmpeg -y -ss {{ part.begin }} -i {{ morning_input }}.fixed.ts -t {{ part.length }} -c copy {{ part.filename }}
 {% endfor %}
 
-{{ morning_input }}.delayed.ts: {{ morning_input }}.fixed.ts
-	ffmpeg -y -i "{{ morning_input }}.fixed.ts" -itsoffset -0.30 -i "{{ morning_input }}.fixed.ts" -map 1:v -map 0:a -vcodec copy -acodec copy "{{ morning_input }}.delayed.ts"
+# {{ morning_input }}.delayed.ts: {{ morning_input }}.fixed.ts
+# 	ffmpeg -y -i "{{ morning_input }}.fixed.ts" -itsoffset -0.30 -i "{{ morning_input }}.fixed.ts" -map 1:v -map 0:a -vcodec copy -acodec copy "{{ morning_input }}.delayed.ts"
 
 {{ morning_input }}.fixed.ts: {{ morning_input }}
 	ffmpeg -y -i {{ morning_input }} -codec copy -bsf:v h264_mp4toannexb {{ morning_input }}.fixed.ts
