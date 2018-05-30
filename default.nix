@@ -19,7 +19,7 @@ in {
 
       source ./venv/bin/activate
     '';
-    PYTHONPATH = "./commons/:./schedule/:./profiles/:./ffmpeg-edit/:./youtube/";
+    PYTHONPATH = "./commons/:./profiles/:./ffmpeg-edit/:./youtube/";
     SOURCE_DATE_EPOCH=315532800;
   };
 }
