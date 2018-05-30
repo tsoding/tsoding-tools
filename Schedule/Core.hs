@@ -86,7 +86,7 @@ mkTime :: Integer -> Integer -> Time
 mkTime h m = secondsToDiffTime (h * 60 * 60 + m * 60)
 
 datesOfMonth :: Date -> [Date]
-datesOfMonth dt = map (\d1 -> fromGregorian y m d1) $ [1 .. gregorianMonthLength y m]
+datesOfMonth dt = map (fromGregorian y m) $ [1 .. gregorianMonthLength y m]
     where (y, m, d) = toGregorian dt
 
 dayOfDate :: Date -> WeekDay
