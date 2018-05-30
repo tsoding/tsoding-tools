@@ -1,3 +1,5 @@
 venv/
 *.pyc
 schedule.csv
+dist/
+.stack-work/
